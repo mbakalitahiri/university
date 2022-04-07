@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Asignatura</th>
+      <th>Calificacio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of calificaciones">
+      <td>{{item['nombre'] }}</td>
+      <td>{{item.apellidos}}</td>
+      <td>{{item.nombre_curso}}</td>
+      <td>{{item.nota}}</td>
+
+    </tr>
+  </tbody>
+</table>

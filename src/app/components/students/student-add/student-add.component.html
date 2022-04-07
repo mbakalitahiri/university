@@ -1,0 +1,203 @@
+<form #myForm="ngForm" (ngSubmit)="procesar()">
+  <div class="form-group">
+    <label for="First Name">First Name</label>
+    <input
+      type="text"
+      name="nombre"
+      class="form-control"
+      required
+      ngModel
+      minlength="12"
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['nombre']?.invalid &&
+        myForm.form.controls['nombre']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo first name es obligatorio
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Last Name">Last Name</label>
+    <input
+      type="text"
+      ngModel
+      #apellidos
+      name="apellidos"
+      class="form-control"
+      required
+      minlength="12"
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['apellidos']?.invalid &&
+        myForm.form.controls['apellidos']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo Last name es obligatorio
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="id">fecha_nacimiento</label>
+    <input
+      type="text"
+      ngModel
+      #fecha_nacimiento
+      name="fecha_nacimiento"
+      class="form-control"
+      required=""
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['fecha_nacimiento']?.invalid &&
+        myForm.form.controls['fecha_nacimiento']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo fecha_nacimiento name es obligatorio
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="id">sexo</label>
+    <select ngModel #sexo name="sexo" class="form-control" required>
+      <option >Select option</option>
+      <option value="1">Masculino</option>
+      <option value="2">Femenino</option>
+    </select>
+
+    <div class="alert alert-danger alert-dismissible fade show" *ngIf="!myForm.controls['sexo']?.valid && myForm.controls['sexo']?.touched" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Atencion!</strong> El campo sexo name es obligatorio
+    </div>
+  </div>
+  
+ 
+  <div class="form-group">
+    <label for="First Name">direccion</label>
+    <input
+      type="text"
+      name="direccion"
+      class="form-control"
+      required
+      ngModel
+      minlength="12"
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['direccion']?.invalid &&
+        myForm.form.controls['direccion']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo direccion es obligatorio
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Last Name">telefono</label>
+    <input
+      type="text"
+      ngModel
+      #telefono
+      name="telefono"
+      class="form-control"
+      required
+      minlength="12"
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['telefono']?.invalid &&
+        myForm.form.controls['telefono']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo telefono es obligatorio
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="id">email</label>
+    <input
+      type="text"
+      ngModel
+      #email
+      name="email"
+      class="form-control"
+      required=""
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['email']?.invalid &&
+        myForm.form.controls['email']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo email name es obligatorio
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="id">password</label>
+    <input
+      type="password"
+      ngModel
+      #password
+      name="password"
+      class="form-control"
+      required=""
+    />
+    <div
+      class="form-group mt-1"
+      *ngIf="
+        myForm.form.controls['password']?.invalid &&
+        myForm.form.controls['password']?.touched
+      "
+    >
+      <div class="alert alert-danger alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <strong>Atencion!</strong> El campo password name es obligatorio
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-block mt-3" [disabled]="!myForm.valid">
+    Enviar
+  </button>
+</form>

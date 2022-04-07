@@ -1,0 +1,42 @@
+<div class="col row mt-3">
+  <div class="col-md-12">
+
+    <div>
+      <input type="text" class="form-control"[(ngModel)]="termino" [name]="termino" placeholder="place for a studendt">
+    </div>
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">apellidos</th>
+          <th scope="col">dob</th>
+          <th scope="col">gender</th>
+          <th scope="col" colspan="2">actions</th>
+
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of students | filteringData:termino"  class="hover">
+          <td >{{ item.id }}</td>
+          <td >{{ item.nombre }}</td>
+          <td>{{ item.apellidos }}</td>
+          <td>{{ item.fecha_nacimiento }}</td>
+          <td>{{ item.sexo | gender}}</td>
+          <td><button class="btn btn-warning" (click)="onRemoveBtn(item.id)">Remove</button></td>
+          <td><button class="btn btn-primary" [routerLink]="['/student-detail',item.id]" >Detalles</button></td>
+
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <!-- <div class="col-md-5">
+    <router-outlet></router-outlet>
+  </div> -->
+</div>
+
+ 

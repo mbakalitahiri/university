@@ -1,0 +1,105 @@
+<form [formGroup]="studendForm" (ngSubmit)="procesar()">
+  <div class="form-group">
+    <label for="First Name">First Name</label>
+    <input type="text" name="nombre" class="form-control" formControlName="nombre" />
+
+  </div>
+
+  <div class="form-group">
+    <label for="Last Name">Last Name</label>
+    <input type="text" name="apellidos" class="form-control" formControlName="apellidos" />
+
+  </div>
+
+  <div class="form-group">
+    <label for="id">fecha_nacimiento</label>
+    <input type="text" name="fecha_nacimiento" class="form-control" formControlName="fecha_nacimiento" />
+
+  </div>
+
+  <div class="form-group">
+    <label for="id">sexo</label>
+    <select name="sexo" class="form-control" formControlName="sexo">
+      <option>Select option</option>
+      <option value="1">Masculino</option>
+      <option value="2">Femenino</option>
+    </select>
+
+
+  </div>
+
+
+  <div class="form-group">
+    <label for="First Name">direccion</label>
+    <input type="text" name="direccion" class="form-control" formControlName="direccion" />
+
+  </div>
+
+  <div class="form-group">
+    <label for="Last Name">telefono</label>
+    <input type="text" name="telefono" class="form-control" formControlName="telefono" />
+
+  </div>
+
+  <div class="form-group">
+    <label for="id">email</label>
+    <input type="text" name="email" class="form-control" formControlName="email" />
+
+  </div>
+
+  <div class="form-group">
+    <label for="id">password</label>
+    <input type="password" name="password" class="form-control" formControlName="password" />
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="id">personal_web</label>
+        <input type="text" name="email" class="form-control" formControlName="personal_web" />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="id">personal_github</label>
+        <input type="text" name="email" class="form-control" formControlName="personal_github" />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="id">personal_twitter</label>
+        <input type="text" name="email" class="form-control" formControlName="personal_twitter" />
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="id">personal_instagram</label>
+        <input type="text" name="email" class="form-control" formControlName="personal_instagram" />
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="id">personal_facebook</label>
+        <input type="text" name="email" class="form-control" formControlName="personal_facebook" />
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <button class="btn btn-primary btn-block mt-3">
+    Enviar
+  </button>
+</form>
