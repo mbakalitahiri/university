@@ -48,7 +48,7 @@ export class StudentsComponent implements OnInit {
   }
 
   openModal(template: TemplateRef<any>, student: Istuden) {
-    this.modalRef = this.modalService.show(template);
+    this.modalRef = this.modalService.show(template, { class: "modal-lg" });
     this.modalRef.content = student;
   }
 }
